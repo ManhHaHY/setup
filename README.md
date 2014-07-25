@@ -1,4 +1,4 @@
 setup
 =====
 
-curl https://raw.githubusercontent.com/loint/setup/master/setup.py | python
+curl https://raw.githubusercontent.com/ManhHaHY/setup/master/setup.py | python
