@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-git = 'https://github.com/loint/setup/archive/master.zip'
+git = 'https://github.com/ManhHaHY/setup/archive/master.zip'
 
 modules = [
     'tools',
