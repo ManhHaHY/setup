@@ -13,7 +13,7 @@ modules = [
     'redis',
     'varnish',
     'haproxy',
-    'vsftp',
+    'proftpd',
     'app',
     'freemem',
 ]
@@ -56,10 +56,10 @@ configs = {
         'cp -r '+res('phalcon.ini') + ' /etc/php.d/phalcon.ini'
     ],
     'vsftp': [
-        'cp -r '+res('vsftpd.conf') + ' /etc/vsftpd/vsftpd.conf',
-        "sed -i 's,\r,,;s, *$,,' /etc/vsftpd/vsftpd.conf",
+        'cp -r '+res('vsftpd.conf') + ' /etc/proftpd.conf', 
+        "sed -i 's,\r,,;s, *$,,' /etc/proftpd.conf", 
         'setenforce 0',
-        'useradd '+ftp['username'],
+        'useradd '+ftp['username'], 
         'echo "'+ftp['username']+':'+ftp['password']+'" | chpasswd',
         'chown '+ftp['username']+':'+ftp['username']+' '+paths['host']+'/'+app['app']+' -R ',
     ],

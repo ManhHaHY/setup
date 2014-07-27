@@ -19,7 +19,7 @@ services = [
     #'memcached',
     #'varnish',
     #'haproxy',
-    'vsftpd'
+    'proftpd'
 ]
 
 
